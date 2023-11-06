@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    # 'orders',
+    # 'admin_honeypot',
+    # 'storages',
 ]
 
 MIDDLEWARE = [
@@ -120,7 +123,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -133,3 +135,15 @@ STATICFILES_DIRS = [
 #media files configuration
 MEDIA_URL = '/media/'
 MEDIA_ROOT =  BASE_DIR /'media'
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+# SMTP configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'dessawis10@gmail.com'
+EMAIL_HOST_PASSWORD = 'Rourousse2023!@#$%'
+EMAIL_USE_TLS = True
